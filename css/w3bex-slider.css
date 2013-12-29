@@ -1,0 +1,30 @@
+
+.w3bex-slider {
+	height: 400px;
+	width: 100%;
+	background-color: black;
+	overflow: hidden;
+}
+
+.w3bex-slider > div {
+	width: inherit;
+	height: inherit;
+}
+
+.w3bex-slider .stage {
+	transition: background-color 0.25s ease-in-out;
+	transition-delay: 0.25s;
+	background-color: black;
+	overflow: hidden;
+}
+
+.w3bex-slider .stage .inner-content {
+	transition: opacity 0.25s ease-in-out;
+
+	height: 100%;
+	width: 100%;
+}
+
+.w3bex-slider .stage > div h1 {
+	margin: 0;
+}
