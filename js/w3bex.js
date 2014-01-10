@@ -12,7 +12,7 @@ w3bex.init = function(){
 
 }
 
-$(document).ready(function(){
+window.onload = function(){
 	w3bex.init();
-});
+}
 
