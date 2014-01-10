@@ -2,6 +2,40 @@ W3BEX Slider
 ============
 W3BEX Slider is a simple and flexible html slider.
 
+Usage
+-----
+```html
+<html>
+	<head>
+		<!-- You must include these two files in order to use the slider -->
+		<link rel="stylesheet" href="css/w3bex-slider.css">
+		<script src='js/w3bex-slider.js'></script>
+		<script>
+			// Initialize the slider
+			window.onload = function(){
+				var myslider = new w3bexSlider({
+					sliderId: "home-slider"
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Create a div for the slider -->
+		<div id='home-slider' class='w3bex-slider'>
+			<!-- Then create some slides -->
+            <div data-color='black'>
+                <h1>Slide 1</h1>
+            </div>
+            <div data-color='#0099ff' data-time='10'>
+                <h1>Slide 2</h1>
+            </div>
+            <div data-color='blue'></div>
+            <div data-color='pink'></div>
+        </div>
+	</body>
+</html>
+```
+
 Transitions
 -----------
 It hasn't a all kinds of fancy transitions, just one for now. It first fades out the content of the slide, then it makes a color transition from the background color of the current template to the background color of the next template, and then it fades in the new slides' html content. All this stuff happens in a half a second.
@@ -38,7 +72,7 @@ defaults = {
 	// this could be overriden with the data-time slide option
 	interval: 8,
 
-	// This is not used yet
+	// This is the ID of the div of the slider
 	sliderId: "#w3bex-slider",
 
 	// This class is added to the slider object when initialized
